@@ -2,14 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+
+@font-face {
+  font-family: 'Vastago Grotesque';
+  src: url('/assets/fonts/VastagoGrotesk-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/assets/fonts/Nohemi-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+html, body {
+  height: 100%;
   margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+main {
+  flex: 1;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
